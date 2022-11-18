@@ -34,3 +34,8 @@ button:hover {
     background-color: #fbbf24;
     color: black;
 }
+.container {
+    width: 50%;
+    height: 100%;
+    margin: auto;
+}
