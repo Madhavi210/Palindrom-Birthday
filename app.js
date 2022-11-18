@@ -56,3 +56,18 @@ function dateFormates(dateEnteredByUser) {
     const formatsOfDate = [DDMMYYYY, MMDDYYYY, YYYYMMDD, DDMMYY, MMDDYY, YYMMDD];
     return formatsOfDate;
 }
+
+function checkPalindromeForAllDateFormates(dateEnteredByUser) {
+    var dateFormateReceived = dateFormates(dateEnteredByUser);
+
+    let resultPalindrome = false;
+    for (let i = 0; i < dateFormateReceived.length; i++) {
+        if (isPalindrome(dateFormateReceived[i])) {
+            return resultPalindrome = true;
+            break;
+        }
+        else {
+            return resultPalindrome;
+        }
+    }
+}
