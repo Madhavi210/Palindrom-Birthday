@@ -80,3 +80,32 @@ function isLeapYear(year) {
     }
     return false;
 }
+function getNextDate(dateEnteredByUser) {
+    var day = dateEnteredByUser.day + 1;
+    var month = dateEnteredByUser.month;
+    var year = dateEnteredByUser.year;
+    const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+    // for day
+    if (month === 2) {
+        if (isLeapYear(year)) {
+            if (day > 29) {
+                day = 1;
+                month++;
+            }
+        }
+        else {
+            if (day > 28) {
+                day = 1;
+                month++;
+            }
+        }
+    }
+    else {
+        if (day > daysInMonth[month - 1]) {
+            day = 1;
+            month++;
+        }
+    }
+
+    // for month
