@@ -192,3 +192,20 @@ function getPreviousPalindromeDate(dateEnteredByUser) {
     }
     return [counterPrevious, previousDate];
 }
+
+function nearestPalindromeDate(next, previous) {
+    var months = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
+    if (next[0] < previous[0]) {
+        if (next[0] === 1) {
+            outputText.innerText = "The nearest palindrome date is: " + next[1].day + " " + months[next[1].month - 1] + ", " + next[1].year + ". " + "You missed it by " + next[0] + " day.";
+        } else {
+            outputText.innerText = "The nearest palindrome date is: " + next[1].day + " " + months[next[1].month - 1] + ", " + next[1].year + ". " + "You missed it by " + next[0] + " days.";
+        }
+    } else {
+        if (previous[0] === 1) {
+            outputText.innerText = "The nearest palindrome date is: " + previous[1].day + " " + months[previous[1].month - 1] + ", " + previous[1].year + ". " + "You missed it by " + previous[0] + " day.";
+        } else {
+            outputText.innerText = "The nearest palindrome date is: " + previous[1].day + " " + months[previous[1].month - 1] + ", " + previous[1].year + ". " + "You missed it by " + previous[0] + " days.";
+        }
+    }
+}
