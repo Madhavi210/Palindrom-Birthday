@@ -150,3 +150,17 @@ function getPreviousDate(dateEnteredByUser) {
             month--;
         }
     }
+
+     // for month
+     if (month < 1) {
+        day = 31;
+        month = 12;
+        year--;
+    }
+
+    return {
+        day: day,
+        month: month,
+        year: year
+    };
+}
