@@ -13,3 +13,13 @@ function isPalindrome(str) {
     var reversedText = reverseStr(str);
     return (str === reversedText);
 }
+
+
+function convertDateToString(dateEnteredByUser) {
+    //strDate object
+    var strDate = {
+        day: "",
+        month: "",
+        year: ""
+    };
+    //for day
