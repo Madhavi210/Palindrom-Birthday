@@ -39,3 +39,6 @@ button:hover {
     height: 100%;
     margin: auto;
 }
+.result {
+    color: red;
+}
