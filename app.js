@@ -123,3 +123,30 @@ function getNextDate(dateEnteredByUser) {
     };
 
 }
+function getPreviousDate(dateEnteredByUser) {
+    var day = dateEnteredByUser.day - 1;
+    var month = dateEnteredByUser.month;
+    var year = dateEnteredByUser.year;
+    const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+
+    // for day
+    if (month === 3) {
+        if (isLeapYear(year)) {
+            if (day < 1) {
+                day = daysInMonth[month - 1];
+                month--;
+            }
+        }
+        else {
+            if (day < 1) {
+                day = daysInMonth[month - 1];
+                month--;
+            }
+        }
+    }
+    else {
+        if (day < 1) {
+            day = daysInMonth[month - 1];
+            month--;
+        }
+    }
