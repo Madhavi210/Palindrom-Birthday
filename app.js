@@ -109,3 +109,17 @@ function getNextDate(dateEnteredByUser) {
     }
 
     // for month
+
+    if (month > 12) {
+        day = 1;
+        month = 1;
+        year++;
+    }
+
+    return {
+        day: day,
+        month: month,
+        year: year
+    };
+
+}
