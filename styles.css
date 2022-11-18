@@ -6,3 +6,10 @@
 h1 {
     color: yellowgreen;
 }
+body {
+    margin: 0;
+    background-color: #1e293b;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
