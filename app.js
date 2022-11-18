@@ -236,3 +236,4 @@ function outputValue() {
         outputText.style.color = "#0ea5e9";
     }
 }
+checkBtn.addEventListener("click", outputValue);
