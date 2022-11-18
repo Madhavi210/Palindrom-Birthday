@@ -164,3 +164,31 @@ function getPreviousDate(dateEnteredByUser) {
         year: year
     };
 }
+
+function getNextPalindromeDate(dateEnteredByUser) {
+    var nextDate = getNextDate(dateEnteredByUser);
+    var counterNext = 0;
+    while (true) {
+        counterNext++;
+        if (checkPalindromeForAllDateFormates(nextDate)) {
+            break;
+        }
+        nextDate = getNextDate(nextDate)
+    }
+    return [counterNext, nextDate];
+}
+
+function getPreviousPalindromeDate(dateEnteredByUser) {
+
+    var previousDate = getPreviousDate(dateEnteredByUser);
+    var counterPrevious = 0;
+
+    while (true) {
+        counterPrevious++;
+        if (checkPalindromeForAllDateFormates(previousDate)) {
+            break;
+        }
+        previousDate = getPreviousDate(previousDate);
+    }
+    return [counterPrevious, previousDate];
+}
