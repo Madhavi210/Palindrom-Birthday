@@ -30,3 +30,15 @@ function convertDateToString(dateEnteredByUser) {
         strDate.day = dateEnteredByUser.day.toString();
     }
     //for month
+    if (dateEnteredByUser.month < 10) {
+        strDate.month = "0" + dateEnteredByUser.month;
+    }
+    else {
+        strDate.month = dateEnteredByUser.month.toString();
+    }
+    //for year
+    strDate.year = dateEnteredByUser.year.toString();
+
+    return strDate;
+
+}
