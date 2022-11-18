@@ -209,3 +209,30 @@ function nearestPalindromeDate(next, previous) {
         }
     }
 }
+
+function outputValue() {
+    var inputBdate = inputDate.value;
+
+    if (inputBdate !== "") {
+        var dateArray = inputBdate.split("-");
+        var enteredDate = {
+            day: Number(dateArray[2]),
+            month: Number(dateArray[1]),
+            year: Number(dateArray[0]),
+        };
+        // var enteredDatestr=convertDateToString(enteredDate);
+        if (checkPalindromeForAllDateFormates(enteredDate)) {
+            outputText.innerText = "Your Birthday is Palindrome🎉";
+            outputText.style.color = "green";
+        }
+        else {
+            var dateNext = getNextPalindromeDate(enteredDate);
+            var datePrevios = getPreviousPalindromeDate(enteredDate);
+            nearestPalindromeDate(dateNext, datePrevios);
+        }
+    }
+    else {
+        outputText.innerText = "Please Select your date of birth 📢";
+        outputText.style.color = "#0ea5e9";
+    }
+}
