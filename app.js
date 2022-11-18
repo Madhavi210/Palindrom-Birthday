@@ -8,3 +8,8 @@ function reverseStr(str) {
     var reversedString = reversedListOfChar.join("");
     return reversedString;
 }
+
+function isPalindrome(str) {
+    var reversedText = reverseStr(str);
+    return (str === reversedText);
+}
