@@ -3,6 +3,7 @@
     color-scheme: dark;
     color: #fbbf24;
 }
+
 h1 {
     color: yellowgreen;
 }
@@ -34,6 +35,7 @@ button:hover {
     background-color: #fbbf24;
     color: black;
 }
+
 .container {
     width: 50%;
     height: 100%;
