@@ -193,6 +193,7 @@ function getPreviousPalindromeDate(dateEnteredByUser) {
     return [counterPrevious, previousDate];
 }
 
+
 function nearestPalindromeDate(next, previous) {
     var months = ["Jan", "Feb", "March", "April", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
     if (next[0] < previous[0]) {
